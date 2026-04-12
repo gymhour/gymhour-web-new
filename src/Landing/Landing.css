@@ -42,9 +42,9 @@
 
 /* Section */
 .gh-section {
-    padding-top: 80px;
-    padding-bottom: 120px;
-    margin-bottom: 60px;
+    padding-top: 52px;
+    padding-bottom: 64px;
+    margin-bottom: 18px;
     position: relative;
 }
 
@@ -58,7 +58,7 @@
     color: var(--muted);
     max-width: 720px;
     margin-top: 0px;
-    margin-bottom: 48px;
+    margin-bottom: 32px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5;
@@ -432,24 +432,29 @@
 
 /* Card grande */
 .gh-showcase-card {
-    padding: 48px 30px;
+    padding: 36px 28px;
     border-radius: var(--radius-3);
     border: 1px solid var(--border);
     background: var(--surface);
     box-shadow: var(--shadow-sm);
 
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    gap: 40px;
-    text-align: center;
+    justify-content: space-between;
+    gap: 28px;
+    text-align: left;
+}
+
+.gh-showcase-card.is-reverse {
+    flex-direction: row-reverse;
 }
 
 /* Texto */
 .gh-showcase-content {
     width: 100%;
-    max-width: 800px;
+    max-width: 520px;
+    flex: 1 1 0;
 }
 
 .gh-showcase-eyebrow {
@@ -480,7 +485,8 @@
 /* Frame blanco interno (como mock) */
 .gh-showcase-frame {
     width: 100%;
-    max-width: 800px;
+    max-width: 520px;
+    flex: 1 1 0;
     background: #ffffff;
     border-radius: 12px;
     border: 1px solid rgba(0, 0, 0, 0.08);
@@ -851,6 +857,12 @@
 }
 
 @media (max-width: 640px) {
+    .gh-section {
+        padding-top: 40px;
+        padding-bottom: 52px;
+        margin-bottom: 12px;
+    }
+
     .gh-grid-3 {
         grid-template-columns: 1fr;
     }
@@ -896,6 +908,7 @@
     .gh-showcase-card {
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     .gh-showcase-frame {
